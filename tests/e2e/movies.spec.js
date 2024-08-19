@@ -4,7 +4,7 @@ import {executeSQL} from "../support/database"
 
 test('Cadastro Válido de um novo Filme com apenas campos obrigatórios', async ({ page }) => {
     const movie = data.guerra_mundial_z // massa de teste vinda de um arquivo
-    await executeSQL(`delete from public.movies where title='${movie.title}';`)
+    await executeSQL(`DELETE FROM public.movies WHERE title='${movie.title}';`)
     await page.login.makeLogin('admin@zombieplus.com','pwd123','Admin')
     await page.movies.insertMovieMinParams(movie)
     const popupMessage = `O filme '${movie.title}' foi adicionado ao catálogo.`
@@ -58,11 +58,11 @@ test('Procura por termo "zumbi"', async ({ page, request }) => {
     const movies = data.search
     movies.data.forEach(async (mov) => {
         await executeSQL(`delete from public.movies where title='${mov.title}';`)
+    })
+   movies.data.forEach(async (mov) => {
         await request.api.postMovie(mov)
     })
     await page.login.makeLogin('admin@zombieplus.com','pwd123','Admin')
     await page.movies.searchMovie(movies.input)
-    const rows = page.getByRole('row')
-    await expect(rows).toContainText(movies.outputs)
-
+    await page.movies.tableHave(movies.outputs)
 })
