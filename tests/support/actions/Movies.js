@@ -1,4 +1,4 @@
-import {expect} from "../index"
+import { expect } from "../index"
 
 export class Movies {
     constructor(page) {

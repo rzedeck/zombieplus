@@ -1,0 +1,92 @@
+{
+    "walking_dead": {
+        "title": "Walking Dead",
+        "overview": "The Walking Dead takes place after the onset of a worldwide zombie apocalypse. The zombies, referred to as 'walkers', shamble towards living humans and other creatures to eat them. They are attracted to noise and to scents, including the scent of humans.",
+        "company": "Fox Entertainment",
+        "release_year": 2010,
+        "featured": false,
+        "seasons": 11,
+        "cover": "/covers/tvshows/walking_dead.jpg"
+    },
+    "fear_the_walking_dead": {
+        "title": "Fear the Walking Dead",
+        "overview": "A Walking Dead spin-off, set in Los Angeles, following two families who must band together to survive the undead apocalypse.",
+        "company": "Fox Entertainment",
+        "release_year": 2015,
+        "featured": true,
+        "seasons": 7,
+        "cover": "/covers/tvshows/fear_the_walking_dead.jpg"
+    },
+    "black_summer": {
+        "title": "Black Summer",
+        "overview": "In the dark, early days of a zombie apocalypse, complete strangers band together to find the strength they need to survive and get back to loved ones.",
+        "company": "Netflix",
+        "release_year": 2019,
+        "featured": false,
+        "seasons": 2,
+        "cover": "/covers/tvshows/black_summer.jpg"
+    },
+    "z_nation": {
+        "title": "Z Nation",
+        "overview": "Three years after the zombie virus has gutted the United States of America, a team of everyday heroes must transport the only known survivor of the plague from New York to California, where the last functioning viral lab waits for his blood.",
+        "company": "Sony Pictures",
+        "release_year": 2014,
+        "featured": true,
+        "seasons": 5,
+        "cover": "/covers/tvshows/z_nation.jpg"
+    },
+    "i_zombie": {
+        "title": "iZombie",
+        "overview": "A medical resident finds that being a zombie has its perks, which she uses to assist the police.",
+        "company": "Amazon Studios",
+        "release_year": 2015,
+        "featured": false,
+        "seasons": 5,
+        "cover": "/covers/tvshows/i_zombie.jpg"
+    },
+    "daybreak": {
+        "title": "Daybreak",
+        "overview": "High school outcast Josh is searching for his missing girlfriend in post-apocalyptic Glendale. He's joined by a group of misfits. The show unfolds in a genre-bending, fourth-wall-breaking format.",
+        "company": "Netflix",
+        "release_year": 2019,
+        "featured": true,
+        "seasons": 1,
+        "cover": "/covers/tvshows/daybreak.jpg"
+    },
+    "kingdom": {
+        "title": "Kingdom",
+        "overview": "In the Joseon era, a crown prince is sent on a suicide mission to investigate a mysterious outbreak.",
+        "company": "Netflix",
+        "release_year": 2019,
+        "featured": false,
+        "seasons": 2,
+        "cover": "/covers/tvshows/kingdom.jpg"
+    },
+    "the_rain": {
+        "title": "The Rain",
+        "overview": "After a brutal virus wipes out most of the population, two young siblings embark on a perilous search for safety.",
+        "company": "Amazon Studios",
+        "release_year": 2018,
+        "featured": true,
+        "seasons": 3,
+        "cover": "/covers/tvshows/the_rain.jpg"
+    },
+    "dead_set": {
+        "title": "Dead Set",
+        "overview": "During a fictional series of Big Brother, a zombie apocalypse breaks out, leaving the contestants trapped inside the house.",
+        "company": "E4",
+        "release_year": 2008,
+        "featured": false,
+        "seasons": 1,
+        "cover": "/covers/tvshows/dead_set.jpg"
+    },
+    "santa_clarita_diet": {
+        "title": "Santa Clarita Diet",
+        "overview": "Sheila and Joel are married real estate agents in Santa Clarita, California. When Sheila dies, she undergoes a transformation into a zombie and starts craving human flesh.",
+        "company": "Netflix",
+        "release_year": 2017,
+        "featured": true,
+        "seasons": 3,
+        "cover": "/covers/tvshows/santa_clarita_diet.jpg"
+    }
+}

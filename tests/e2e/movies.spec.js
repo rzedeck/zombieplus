@@ -1,10 +1,11 @@
-import { test, expect } from "../support/index"
-import data from '../support/fixture/movies.json'
-import {executeSQL} from "../support/database"
+import { test } from "../support/index"
+import data from '../support/fixture/movies.json' //assert { type: 'json' }
+import { executeSQL } from "../support/database"
 
 test('Cadastro Válido de um novo Filme com apenas campos obrigatórios', async ({ page }) => {
     const movie = data.guerra_mundial_z // massa de teste vinda de um arquivo
     await executeSQL(`DELETE FROM public.movies WHERE title='${movie.title}';`)
+    console.log(movie.title)
     await page.login.makeLogin('admin@zombieplus.com','pwd123','Admin')
     await page.movies.insertMovieMinParams(movie)
     const popupMessage = `O filme '${movie.title}' foi adicionado ao catálogo.`
