@@ -48,4 +48,23 @@ export class TVShows {
 
         await this.submitForm()
     }
+
+    async remove(title){
+        await this.page.getByRole('row', {name: title}).getByRole('button').click()
+        await this.page.click('.confirm-removal')
+    }
+
+    async alertHaveText(target){
+        await expect(this.page.locator('.alert')).toHaveText(target)
+    }
+
+    async searchShow(target){
+        await this.page.getByPlaceholder('Busque pelo nome').fill(target)
+        await this.page.click('.actions button')
+    }
+
+    async tableHave(content){
+        const rows = this.page.getByRole('row')
+        await expect(rows).toContainText(content, {timeout: 7000})
+    }
 }

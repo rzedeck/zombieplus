@@ -24,7 +24,7 @@
         "release_year": 2019,
         "featured": false,
         "seasons": 2,
-        "cover": "/covers/tvshows/black_summer.jpg"
+        "cover": "black_summer.jpg"
     },
     "z_nation": {
         "title": "Z Nation",
@@ -33,34 +33,43 @@
         "release_year": 2014,
         "featured": true,
         "seasons": 5,
-        "cover": "/covers/tvshows/z_nation.jpg"
+        "cover": "z_nation.jpg"
     },
-    "i_zombie": {
-        "title": "iZombie",
-        "overview": "A medical resident finds that being a zombie has its perks, which she uses to assist the police.",
-        "company": "Amazon Studios",
-        "release_year": 2015,
-        "featured": false,
-        "seasons": 5,
-        "cover": "/covers/tvshows/i_zombie.jpg"
-    },
-    "daybreak": {
-        "title": "Daybreak",
-        "overview": "High school outcast Josh is searching for his missing girlfriend in post-apocalyptic Glendale. He's joined by a group of misfits. The show unfolds in a genre-bending, fourth-wall-breaking format.",
-        "company": "Netflix",
-        "release_year": 2019,
-        "featured": true,
-        "seasons": 1,
-        "cover": "/covers/tvshows/daybreak.jpg"
-    },
-    "kingdom": {
-        "title": "Kingdom",
-        "overview": "In the Joseon era, a crown prince is sent on a suicide mission to investigate a mysterious outbreak.",
-        "company": "Netflix",
-        "release_year": 2019,
-        "featured": false,
-        "seasons": 2,
-        "cover": "/covers/tvshows/kingdom.jpg"
+    "search": {
+        "input": "zombie",
+        "outputs": [
+            "iZombie",
+            "Zombie Daybreak"
+        ],
+        "data": [
+            {
+                "title": "iZombie",
+                "overview": "A medical resident finds that being a zombie has its perks, which she uses to assist the police.",
+                "company": "Amazon Studios",
+                "release_year": 2015,
+                "featured": false,
+                "seasons": 5,
+                "cover": "i_zombie.jpg"
+            },
+            {
+                "title": "Zombie Daybreak",
+                "overview": "High school outcast Josh is searching for his missing girlfriend in post-apocalyptic Glendale. He's joined by a group of misfits. The show unfolds in a genre-bending, fourth-wall-breaking format.",
+                "company": "Netflix",
+                "release_year": 2019,
+                "featured": true,
+                "seasons": 1,
+                "cover": "daybreak.jpg"
+            },
+            {
+                "title": "Kingdom",
+                "overview": "In the Joseon era, a crown prince is sent on a suicide mission to investigate a mysterious outbreak.",
+                "company": "Netflix",
+                "release_year": 2019,
+                "featured": false,
+                "seasons": 2,
+                "cover": "kingdom.jpg"
+            }
+        ]
     },
     "the_rain": {
         "title": "The Rain",
