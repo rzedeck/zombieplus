@@ -1,9 +1,10 @@
 import {test as base, expect} from '@playwright/test'
-import {Leads} from "./actions/Leads"
-import {Login} from "./actions/Login"
-import {Movies} from "./actions/Movies"
-import {PopUp} from "./actions/Components"
-import {Api} from "./api";
+import { Leads } from "./actions/Leads"
+import { Login } from "./actions/Login"
+import { Movies } from "./actions/Movies"
+import { PopUp } from "./actions/Components"
+import { Api } from "./api"
+import { TVShows } from './actions/TVShows'
 
 /*
     fixture com mesmo contexto do page
@@ -20,7 +21,7 @@ const test = base.extend({
         context['login'] = new Login(page)
         context['movies'] = new Movies(page)
         context['popup'] = new PopUp(page)
-
+        context['tvshows'] = new TVShows(page)
         await use(context)
     },
 
