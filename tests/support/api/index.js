@@ -1,4 +1,5 @@
 import {expect} from "../index"
+import * as fs from "fs"
 
 export class Api {
     constructor (request) {
@@ -46,6 +47,35 @@ export class Api {
                 company_id: companyID,
                 release_year: movie.release_year,
                 featured: movie.featured
+            }
+        })
+        expect(response.ok()).toBeTruthy()
+    }
+
+    async postShow (show) {
+        
+        const image = fs.readFileSync('tests/support/fixture/covers/tvshows/' + show.cover)
+        console.log(typeof image)
+        console.log(image)
+        const companyID = await this.getCompanyIDByName(show.company)
+        const response = await this.request.post('http://localhost:3333/tvshows', {
+            headers: {
+                Authorization: `Bearer ${this.token}`,
+                ContentType: 'multipart/form-data',
+                Accept: 'application/json, text/plain, */**'
+            },
+            multipart: {
+                cover: {//todo review how to send the cover
+                    filename: show.cover,
+                    ContentType : "image/jpeg",
+                    Buffer: image
+                },
+                title: show.title,
+                overview: show.overview,
+                company_id: companyID,
+                release_year: show.release_year,
+                seasons: show.seasons,
+                featured: show.featured
             }
         })
         expect(response.ok()).toBeTruthy()
