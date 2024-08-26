@@ -3,7 +3,7 @@ import data from "../support/fixture/tvshows.json"
 import { executeSQL } from "../support/database"
 
 test.beforeAll(async () => {
-    await executeSQL(`DELETE FROM public.tvshows`)
+    await executeSQL(`DELETE FROM public.tvshows;`)
 })
 
 

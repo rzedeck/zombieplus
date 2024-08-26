@@ -5,7 +5,7 @@ const { defineConfig, devices } = require('@playwright/test');
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// require('dotenv').config();
+require('dotenv').config();
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -31,7 +31,7 @@ module.exports = defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'on-first-retry',
-    baseURL: 'http://localhost:3000'
+    baseURL: process.env.BASE_URL
   },
 
   /* Configure projects for major browsers */

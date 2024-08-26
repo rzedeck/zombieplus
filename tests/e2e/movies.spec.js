@@ -3,7 +3,7 @@ import data from '../support/fixture/movies.json' //assert { type: 'json' }
 import { executeSQL } from "../support/database"
 
 test.beforeAll(async () => {
-    await executeSQL(`DELETE FROM public.movies`)
+    await executeSQL(`DELETE FROM public.;`)
 })
 
 test('Cadastro Válido de um novo Filme com apenas campos obrigatórios', async ({ page }) => {
