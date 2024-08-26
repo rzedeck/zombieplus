@@ -2,10 +2,14 @@ import { test } from "../support/index"
 import data from '../support/fixture/movies.json' //assert { type: 'json' }
 import { executeSQL } from "../support/database"
 
+test.beforeAll(async () => {
+    await executeSQL(`DELETE FROM public.movies`)
+})
+
 test('Cadastro Válido de um novo Filme com apenas campos obrigatórios', async ({ page }) => {
     const movie = data.guerra_mundial_z // massa de teste vinda de um arquivo
     await executeSQL(`DELETE FROM public.movies WHERE title='${movie.title}';`)
-    console.log(movie.title)
+    //console.log(movie.title)
     await page.login.makeLogin('admin@zombieplus.com','pwd123','Admin')
     await page.movies.insertMovieMinParams(movie)
     const popupMessage = `O filme '${movie.title}' foi adicionado ao catálogo.`
@@ -57,9 +61,10 @@ test('Cadastro Inválido de um novo Filme - Todos os campos obrigatórios em bra
 
 test('Procura por termo "zumbi"', async ({ page, request }) => {
     const movies = data.search
-    movies.data.forEach(async (mov) => {
+   /*movies.data.forEach(async (mov) => {
         await executeSQL(`delete from public.movies where title='${mov.title}';`)
-    })
+    })*/
+   //todo resolve flakness (the insertion order matters to result)
    movies.data.forEach(async (mov) => {
         await request.api.postMovie(mov)
     })

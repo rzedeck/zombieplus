@@ -2,6 +2,11 @@ import { test } from "../support/index"
 import data from "../support/fixture/tvshows.json"
 import { executeSQL } from "../support/database"
 
+test.beforeAll(async () => {
+    await executeSQL(`DELETE FROM public.tvshows`)
+})
+
+
 test('Cadastro Válido de uma nova Série com apenas campos obrigatórios', async ({ page }) => {
     const show = data.walking_dead
     await executeSQL(`DELETE FROM public.tvshows WHERE title='${show.title}';`)
@@ -53,9 +58,9 @@ test('Cadastro Inválido de uma nova Série - Todos os campos obrigatórios em b
 
 test('Procura por termo "zombie"', async ({ page, request }) => {
     const shows = data.search
-    shows.data.forEach(async (shw) => {
+    /*shows.data.forEach(async (shw) => {
         await executeSQL(`delete from public.tvshows where title='${shw.title}';`)
-    })
+    })*/
    shows.data.forEach(async (shw) => {
         await request.api.postShow(shw)
     })
