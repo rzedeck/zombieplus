@@ -1,5 +1,10 @@
 import {test, expect} from "../support";
 import { faker } from '@faker-js/faker'
+import { executeSQL } from "../support/database"
+
+test.beforeAll(async () => {
+  await executeSQL('DELETE FROM public.leads')
+})
 
 test('Cadastro Válido de lead na fila de espera', async ({ page }) => {
   const leadName = faker.person.fullName()
